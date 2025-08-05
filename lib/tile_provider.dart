@@ -35,7 +35,7 @@ class CachedTileProvider extends TileProvider {
         } else {
           // Download tile and cache it
           String url =
-              'https://mts.googleapis.com/vt?lyrs=m&x=$x&y=$y&z=$zoom&key=AIzaSyCqw5ul9JggZ3YremcVWNSpWaqgxTpccVI';
+              'https://mts.googleapis.com/vt?lyrs=m&x=$x&y=$y&z=$zoom&key=GOOGLE_API_KEY';
           var response = await http.get(Uri.parse(url));
           if (response.statusCode == 200) {
             box.put(key, response.bodyBytes);
@@ -70,7 +70,7 @@ class CachedTileProvider extends TileProvider {
 //       // Download tile and cache it
 //       log('Downloading tile: $key');
 //       String url =
-//           'https://mts.googleapis.com/vt?lyrs=m&x=$x&y=$y&z=$zoom&key=AIzaSyCqw5ul9JggZ3YremcVWNSpWaqgxTpccVI';
+//           'https://mts.googleapis.com/vt?lyrs=m&x=$x&y=$y&z=$zoom&key=GOOGLE_API_KEY';
 //       var response = await http.get(Uri.parse(url));
 //       if (response.statusCode == 200) {
 //         box.put(key, response.bodyBytes);
